@@ -46,7 +46,8 @@ type logEntry struct {
 func entry() *logEntry {
 	logger := log.New()
 	logEntry := &logEntry{logger: logger}
-	logEntry.logger.SetFormatter(&logFormatter{})
+	logEntry.logger.SetFormatter(&log.TextFormatter{})
+	logEntry.logger.SetReportCaller(true)
 	return logEntry
 }
 
@@ -58,6 +59,7 @@ func GetLogger() *log.Logger {
 // SetLogger ...
 func SetLogger(logger *log.Logger) {
 	LogEntry.logger = logger
+	LogEntry.logger.SetFormatter(&logFormatter{})
 }
 
 // SetLevel ...
