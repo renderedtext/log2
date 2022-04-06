@@ -58,7 +58,6 @@ func GetLogger() *log.Logger {
 // SetLogger ...
 func SetLogger(logger *log.Logger) {
 	LogEntry.logger = logger
-	LogEntry.logger.SetFormatter(&logFormatter{})
 }
 
 // SetLevel ...
