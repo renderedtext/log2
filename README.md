@@ -2,7 +2,7 @@
 
 TODOS:
 
-- [ ] Explain motivation;
+- [ x] Explain motivation;
 
 - [ ] Add usage examples (documentation);
 
